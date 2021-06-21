@@ -17,7 +17,7 @@ export function SignIn() {
           Conecte-se {"\n"} e organize suas{"\n"} jogatinas
         </Text>
         <Text style={styles.subtitle}>
-          Crie grupos para jogar seus games{"\n"} favoritos com seus amigos
+          Crie grupos para jogar seus games favoritos com seus amigos
         </Text>
         <ButtonIcon activeOpacity={0.7} title="Entrar com Discord" />
       </View>
