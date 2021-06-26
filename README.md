@@ -14,6 +14,8 @@
 <p align="center">
   <img width=200px height=50% src="https://user-images.githubusercontent.com/49297012/122696402-5959ba00-d219-11eb-8158-7b7855c964b9.jpg" alt="White Mode Initial Screen">
    <img width=200px height=50% src="https://user-images.githubusercontent.com/49297012/123487258-ecad3980-d5e3-11eb-917f-b0e8c0c28573.jpg" alt="Project Homepage">
+   <img width=200px height=50% src="https://user-images.githubusercontent.com/49297012/123521442-166e6b00-d68d-11eb-8ab7-b2ae7f02d452.jpeg" alt="Project Details Page">
+    <img width=200px height=50% src="https://user-images.githubusercontent.com/49297012/123521443-17070180-d68d-11eb-95ea-bd0d3e465738.jpeg" alt="Schedule Match Page">
 
 </p>
 
