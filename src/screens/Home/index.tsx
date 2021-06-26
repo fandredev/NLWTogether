@@ -36,6 +36,7 @@ export function Home(): JSX.Element {
   function handleNavigateToAppointmentDetails() {
     navigation.navigate("AppointmentDetails");
   }
+
   function handleNavigateToAppointmentCreate() {
     navigation.navigate("AppointmentCreate");
   }
@@ -49,22 +50,21 @@ export function Home(): JSX.Element {
         categorySelected={category}
         setCategory={handleCategorySelect}
       />
-      <View style={styles.content}>
-        <ListHeader title="Partidas agendadas" subtitle="Total: 6" />
-        <FlatList
-          data={appointments}
-          keyExtractor={({ id }) => id}
-          style={styles.matches}
-          showsVerticalScrollIndicator={false}
-          ItemSeparatorComponent={() => <ListDivider />}
-          renderItem={({ item }) => (
-            <Appointments
-              data={item}
-              onPress={handleNavigateToAppointmentDetails}
-            />
-          )}
-        />
-      </View>
+      <ListHeader title="Partidas agendadas" subtitle="Total: 6" />
+      <FlatList
+        data={appointments}
+        keyExtractor={({ id }) => id}
+        style={styles.matches}
+        showsVerticalScrollIndicator={false}
+        ItemSeparatorComponent={() => <ListDivider />}
+        contentContainerStyle={{ paddingBottom: 69 }}
+        renderItem={({ item }) => (
+          <Appointments
+            data={item}
+            onPress={handleNavigateToAppointmentDetails}
+          />
+        )}
+      />
     </Background>
   );
 }

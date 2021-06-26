@@ -1,8 +1,6 @@
 import { StyleSheet } from 'react-native'
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 
-
-
 export const styles = StyleSheet.create({
   container: {
     flex: 1
@@ -14,9 +12,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: getStatusBarHeight() + 26,
     marginBottom: 42
-  },
-  content: {
-    marginTop: 42
   },
   matches: {
     marginTop: 24,
