@@ -48,6 +48,7 @@ export function AppointmentDetails(): JSX.Element {
         `/guilds/${guildSelected.guild.id}/widget.json`
       );
       setWidget(response.data);
+      console.log(widget, "WIDGET");
     } catch (error) {
       Alert.alert(
         "Verifique as configurações do servidor. Será que o Widget está habilitado?"
@@ -58,18 +59,24 @@ export function AppointmentDetails(): JSX.Element {
   }
 
   function handleShareInvitation() {
+    console.log(widget);
+
     const message =
       Platform.OS === "ios"
         ? `Junte-se a ${guildSelected.guild.name}`
         : widget.instant_invite;
-
-    Share.share({
-      message,
-      url: widget.instant_invite,
-    });
+    if (widget.instant_invite) {
+      Share.share({
+        message,
+        url: widget.instant_invite,
+      });
+    } else {
+      Alert.alert("Não há um link de redirecionamento desse servidor.");
+    }
   }
   function handleOpenLinking() {
-    Linking.openURL(widget.instant_invite);
+    if (widget.instant_invite) Linking.openURL(widget.instant_invite);
+    else Alert.alert("Você precisa ter um link vinculado ao canal.");
   }
   useEffect(() => {
     fetchWidget();
@@ -93,14 +100,15 @@ export function AppointmentDetails(): JSX.Element {
           <Text style={styles.subtitle}>{guildSelected.description}</Text>
         </View>
       </ImageBackground>
-
       {loading ? (
         <Load />
       ) : (
         <>
           <ListHeader
             title="Jogadores"
-            subtitle={`Total: ${widget.members.length}`}
+            subtitle={`Total: ${
+              widget.members === undefined ? 0 : widget.members.length
+            }`}
           />
           <FlatList
             data={widget.members}

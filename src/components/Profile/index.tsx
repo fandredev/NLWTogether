@@ -14,10 +14,11 @@ export function Profile(): JSX.Element {
       { text: "Sim", onPress: () => signOut() },
     ]);
   }
+
   return (
     <View style={styles.container}>
       <RectButton onPress={handleSignOut}>
-        <Avatar urlImage={user.avatar} />
+        <Avatar urlImage={"https://github.com/flubyGit.png"} />
       </RectButton>
       <View>
         <View style={styles.user}>
