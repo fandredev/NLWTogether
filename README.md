@@ -33,7 +33,7 @@
 
 ## 🧐 Sobre <a name = "about"></a>
 
-Aplicativo realizado durante a semana do NLW Together, '6°' edição do evento NLW da Rocketseat.
+Aplicativo realizado durante a semana do NLW Together, na 6° edição do evento NLW da Rocketseat.
 
 ### Pré Requisitos
 
@@ -65,7 +65,7 @@ sudo yarn install (ou npm i)
 Inicie o expo
 
 ```
-sudo expo start
+sudo expo start --tunnel
 ```
 
 
@@ -77,7 +77,6 @@ sudo expo start
 ## ⛏️ Ferramentas usadas <a name = "built_using"></a>
 
 - [React Native](https://reactnative.dev/) - Mobile Framework
-- [Styled-Components](https://styled-components.com/) - CSS in JS
 - [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/) - Util Buttons Platform
 - [React Navigation](https://reactnavigation.org/) - Control navigation app
 - [Typescript](https://www.typescriptlang.org/) - Superset Javascript
@@ -89,4 +88,8 @@ sudo expo start
 
 ## 🎉 Conquistas <a name = "acknowledgement"></a>
 
-- Em progresso...
+- Utilização e leitura de documentação da API do Discord
+- Utilização de Compartilhamento de links com React Native (Share)
+- Reforço das aulas do Ignite (React Navigation, AsyncStorage, Organização do Código, Pastas)
+- Variaveis de Ambiente
+- Criação de Hooks próprios com a Context API
