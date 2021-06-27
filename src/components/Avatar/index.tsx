@@ -10,6 +10,7 @@ type Props = {
 
 export function Avatar({ urlImage }: Props): JSX.Element {
   const { secondary50, secondary70 } = theme.colors;
+
   return (
     <LinearGradient
       style={styles.container}
